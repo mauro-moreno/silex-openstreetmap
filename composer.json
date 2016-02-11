@@ -1,0 +1,23 @@
+{
+    "name": "mauro-moreno/silex-openstreetmap",
+    "description": "Silex Wrapper for the OpenStreetMap API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mauro Moreno",
+            "email": "moreno.mauro.emanuel@gmail.com"
+        }
+    ],
+    "require": {
+        "mauro-moreno/openstreetmap-api-client": "^1.0"
+    },
+    "require-dev": {
+        "silex/silex": ">=1"
+    },
+    "autoload": {
+        "psr-4": {
+            "MauroMoreno\\OpenStreetMap\\Silex\\": "src"
+        }
+    }
+}
