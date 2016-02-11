@@ -27,12 +27,12 @@ class OpenStreetMapServiceProvider implements ServiceProviderInterface
             isset($app['openstreetmap.nominatim.addressinfo']) ?
                 $app['openstreetmap.nominatim.addressinfo'] : 1;
 
-        $app['openstreetmap.nominatim'] = $app->protect(function () use ($app) {
+        $app['openstreetmap.nominatim'] = function () use ($app) {
             return new NominatimClient([
                 'format' => $app['openstreetmap.format'],
                 'addressinfo' => $app['openstreetmap.nominatim.addressinfo']
             ]);
-        });
+        };
     }
     /**
      * {@inheritdoc}
